@@ -26,6 +26,9 @@ body {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
   background-color: black;
   height: 75px;
   color: white;
@@ -36,6 +39,7 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   height: 75px;
+  width: 100vw;
 }
 
 #footerRight i {
@@ -82,18 +86,19 @@ main .mobileView ul li a {
   font-weight: bold;
 }
 
-.mobileView.banner-text {
-  height: 40vh;
+.mobileView .banner-text {
   display: flex;
-  color: antiquewhite;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  height: 40vw;
+  color: antiquewhite;
   text-shadow: 0.1em 0.1em 0 hsl(200 50% 30%);
 }
 
 .mobileView .banner-text h1 {
-  font-size: 3, 5rem;
+  font-size: 3.5rem;
   margin-bottom: 5vh;
 }
 
@@ -101,4 +106,177 @@ main .mobileView ul li a {
   text-align: center;
   font-size: 2.5rem;
   text-transform: capitalize;
+}
+/*Changing to Dekstop view*/
+@media screen and (min-width: 400px) {
+  /*Dekstop site*/
+  .mobileView {
+    display: none; /*here we swich off the mobile view display*/
+  }
+  .desktopView {
+    display: block;
+  }
+
+  /*Footer*/
+  #footerLeft {
+    display: flex;
+    align-items: flex-end;
+
+    margin: left 5px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  #footerRight {
+    width: 30vw;
+  }
+  /*header*/
+  header {
+    display: block;
+    width: 100vw;
+    height: 100px;
+    background-color: black;
+  }
+  .warning {
+    height: 25px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 0.5em;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*will align the elem in the middle of the nav bar*/
+    height: 75px; /*we need 75 in addition to 25=100px in total*/
+  }
+  #navLeft {
+    margin-left: 4rem;
+  }
+  #navLeft img {
+    width: 200px;
+    height: 40px;
+  }
+  #navRight {
+    margin-right: 4rem;
+  }
+  #navRight img {
+    width: 130px;
+    height: 35px;
+  }
+  #navMiddle {
+    display: flex;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  nav ul li {
+    /*we now make them look like buttons*/
+    background-color: rgb(218, 26, 50);
+    margin: 0px 2rem;
+    padding: 8px 15px; /* will make them buttons*/
+    border-radius: 10px;
+    min-width: 100px; /*will make look the buttons same width*/
+    text-align: center;
+    list-style-type: none;
+    transition: 0.2s ease-in-out;
+  }
+  nav ul li:hover {
+    transform: scale(1.1); /*get rid of buled points*/
+  }
+
+  /* Body here we start working on the main sec. for dekstop view*/
+  #banner-promo {
+    position: relative;
+    display: block;
+    top: 100px;
+    left: 65vw;
+    width: 375px;
+    height: 250px;
+    border: 1px solid black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+  }
+  #banner-promo:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 5px 18px 5px black;
+  }
+  .banner-text {
+    /*positioned the text*/
+    position: relative;
+    top: 200px;
+    left: 65vw;
+    display: inline-block; /*we used inline blog to give it a width and the el behave as block*/
+    width: 375px;
+    text-align: center;
+    color: rgb(218, 26, 50);
+  }
+  .banner-text h1 {
+    /* here we style the text*/
+    font-size: 2em;
+  }
+  .banner-text p {
+    /*styling the text paragrh.*/
+    font-size: 1.25em;
+    text-transform: capitalize;
+  }
+  /*this is the order form*/
+  .order {
+    position: relative;
+    width: 600px;
+    top: 250px;
+    margin: auto;
+
+    border: 1px solid black;
+    background-color: white;
+    box-shadow: 0px 8px 10px 5px rgba(0, 0, 0, 0.4);
+
+    font-size: 15px;
+    padding: 1em;
+  }
+  .order h1 {
+    /* here we style the text of the form*/
+    color: rgb(218, 26, 50);
+    margin-bottom: 0.5em;
+  }
+  .order h2,
+  p {
+    /*the paragh. of h2 whitin class order*/
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  .order form {
+    /*styling the form*/
+    border: 1px solid black;
+    width: 100%;
+    padding: 1em 0;
+  }
+  .order form input {
+    width: 60%;
+    border: 1px solid lightblue;
+    border-radius: 5px 0px 0px 5px; /*left side curved*/
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+  .order form input::placeholder {
+    font-weight: bold;
+    color: lightgray;
+  }
+  .order button {
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    margin: none;
+    cursor: pointer;
+  }
+  .order form input,
+  button {
+    padding-left: 1em;
+    font-weight: bold;
+  }
 }

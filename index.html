@@ -12,14 +12,67 @@
   <body>
     <section id='mainSection'>
       <header>
+        <!-- Header Desktop only -->
+
+        <section class='desktopView'>
+        <p class='warning'>Due to adverse weather in some locations delivery may take longer than usual. Sorry for the incovenience and thank you for your patience.</p>
+      
+      <nav class='navbar'>
+        <div id='navLeft'>
+          <a href="https://www.pizzahut.co.uk" target="_blank">
+            <img src="images/img_2.PNG" id="logoImage" />
+          </a>
+        </div>
+
+        <ul id='navMiddle'>
+          <li><a href="#" class="navlinks">Deals</a></li>
+          <li><a href="#" class="navlinks">Locations</a></li>
+          <li><a href="#" class="navlinks">Help</a></li>
+          <li><a href="#" class="navlinks">Contact</a></li>
+        </ul>
+
+        <div id='navRight'>
+          <img src="./images/img_3.PNG" alt="cert">
+        </div>
+      </nav>
+
+      </section>
+
+    
 
       <!-- Header Mobile Only -->
       <section class='mobileView'>
         <img src="./images/img_2.PNG" alt="pizzahut logo">
        </section>
       </header>
-      <main class='banner'>
-       <!-- Body Mobile ONLY -->
+
+      <main class='banner'><!--here we are going to split main to two sec. Body/Mobile-->
+         
+        <!-- Body Desktop ONLY --><!--we turn off when work on Mobile-->
+         <section class='desktopView'>
+
+           <img src="./images/img_1.jpg" alt="promo" id='banner-promo'>
+           <!-- this is the banner text div-->
+           <div class='banner-text'>
+            <h1>Contact-free</h1>
+            <p>on all deliveries across the UK..</p>
+          </div>
+          
+
+          <section class='order'>
+          <h1>Delivery</h1>
+          <h2>Contact-Free</h2>
+          <p>All our deliveries are contact-free to keep everyone healthy. All orders will need to be paid online by debit/credit card.</p>
+          <a href="https://www.pizzahut.co.uk/contactlessdelivery" target="_blank">Learn More</a>
+          <form>
+            <input type="text" placeholder="Postcode" />
+            <button>Find My Hut</button>
+          </form>
+          </section>
+
+        </section>
+
+       <!-- Body Mobile ONLY --><!--we turn it off when we work on Desktop veiw-->
        <section class='mobileView'>
         <ul>
           <li><a href="#" class="navlinks">Deals</a></li>
@@ -32,7 +85,9 @@
           <p>on all deliveries across the UK..</p>
         </div>
       </section>
+
     </main>
+
   </section>
 
   <!--  footer Both Desktop and mobile-->
